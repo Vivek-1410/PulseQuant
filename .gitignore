@@ -1,0 +1,7 @@
+venv/
+node_modules/
+__pycache__/
+.env
+dataset/
+scanner_results.csv
+*.pyc
