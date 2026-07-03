@@ -261,7 +261,19 @@ def run_backtest():
         trades_df.to_csv(export_path, index=False)
         print(f"📊 Detailed Trade Log saved to: {export_path}")
 
-    return trades
+        summary = {
+            "initial_balance": INITIAL_BALANCE,
+            "final_balance": round(current_balance, 2),
+            "net_profit": round(net_profit, 2),
+            "total_trades": total_trades,
+            "wins": wins,
+            "losses": losses,
+            "win_rate": round(win_rate, 2),
+            "fees": round(total_fees, 2),
+            "trades": trades
+        }
+
+        return summary
 
 if __name__ == "__main__":
     run_backtest()

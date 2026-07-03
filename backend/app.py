@@ -58,10 +58,6 @@ def signal():
 @app.route("/backtest")
 def backtest():
 
-    candles = get_candles()
-
-    df = pd.DataFrame(candles)
-
     return run_backtest()
 
 # =========================
